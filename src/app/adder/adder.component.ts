@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-adder',
@@ -10,10 +10,14 @@ export class AdderComponent implements OnInit {
   @Input() n2: String;
 
 
-  
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  getSum(){
+    return Number(this.n1) + Number(this.n2);
   }
 
 }
